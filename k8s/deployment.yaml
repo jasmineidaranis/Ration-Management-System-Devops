@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ration-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ration-app
+  template:
+    metadata:
+      labels:
+        app: ration-app
+    spec:
+      containers:
+      - name: ration-app
+        image: rationapp.azurecr.io/ration-app:latest
+        ports:
+        - containerPort: 3000

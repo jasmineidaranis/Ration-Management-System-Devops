@@ -1,0 +1,20 @@
+{
+  "name": "ration-management-system-main",
+  "version": "1.0.0",
+  "description": "Overview: The Ration Management System is an e-government solution designed to streamline the process of ration distribution to citizens. This web application allows users to manage their ration cards, apply for new rations, and check their status easily. The system aims to enhance transparency and efficiency in the ration distribution process.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.19.2"
+  }
+}

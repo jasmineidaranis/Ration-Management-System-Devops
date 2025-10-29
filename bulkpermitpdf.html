@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godown Stock Report</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function openPdfViewer() {
+            document.getElementById('pdf-viewer').style.display = 'block';
+        }
+
+        function closePdfViewer() {
+            document.getElementById('pdf-viewer').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="main-title-wrapper">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1 class="main-title">E-Governmental Ration Management System</h1>
+        </div>
+    </header>
+    <nav id="main-navbar">
+        <ul class="navbar">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="smart-card-services.html">Smart Card Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li>
+                <a href="hostelwelfare.html">Hostels & Welfare Institutions List</a>
+                <ul id="dropdown-menu" class="dropdown">
+                    <li><a href="hwpdf.html">Hostel & Welfare Institutions</a></li>
+                    <li><a href="bulkpermitpdf.html">Bulk Permit</a></li>
+                </ul>
+            </li>
+            <li><a href="godown-stock-report.html">Godown Stock Report</a></li>
+            <li><a href="pds-report.html">PDS Report</a></li>
+            <li><a href="nfsa-report.html">NFSA Report</a></li>
+        </ul>
+    </nav>
+    <div id="pdf-viewer" class="pdf-viewer">
+        <div class="pdf-container">
+            <button onclick="closePdfViewer()" class="close-btn">Close</button>
+            <iframe id="pdf-iframe" src="bulk-permit.pdf" width="100%" height="100%"></iframe>
+        </div>
+    </div>
+    <main>
+        <h2>Godown Stock Report</h2>
+        <!-- Add your Godown Stock Report content here -->
+        <p>This is where you would display the Godown Stock Report or provide options to generate/view the report.</p>
+        <button onclick="openPdfViewer()">Click me to View!</button>
+    </main>
+</body>
+</html>

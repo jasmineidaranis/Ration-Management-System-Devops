@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ration Management System</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <div class="main-title-wrapper">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1 class="main-title">E-Governmental Ration Management System</h1>
+        </div>
+    </header>
+
+    <nav id="main-navbar">
+        <ul class="navbar">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="smart-card-services.html">Smart Card Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li>
+                <a href="hostelwelfare.html">Hostels & Welfare Institutions List</a>
+                <ul id="dropdown-menu" class="dropdown">
+                    <li><a href="hwpdf.html">Hostel & Welfare Institutions</a></li>
+                    <li><a href="bulkpermitpdf.html">Bulk Permit</a></li>
+                </ul>
+            </li>
+            <li><a href="godown-stock-report.html">Godown Stock Report</a></li>
+            <li><a href="pds-report.html">PDS Report</a></li>
+            <li><a href="nfsa-report.html">NFSA Report</a></li>
+        </ul>
+    </nav>
+    <div id="smart-card-services-list" class="smart-card-services">
+    <h2>Smart Card Services</h2>
+        <nav id="smart-card-navbar" class="smart-card-navbar" style="display: none;">
+            <ul>
+                <li><a href="applysc.html">Apply Smart Card</a></li>
+                <li><a href="scstatus.html">Calculator</a></li>
+                <li><a href="addmem.html">Add Member</a></li>
+                <li><a href="changeaddr.html">Change of Address</a></li>
+                <li><a href="famheadcha.html">Family Head Member Change</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <div class="service-content" id="apply-smart-card">
+            <h3>Apply Smart Card</h3>
+            <form action="/applysc" method="post">
+                <label for="applicant-name">Applicant Name:</label>
+                <input type="text" id="applicant-name" name="applicant_name" required>
+        
+                <label for="applicant-mobile">Mobile Number:</label>
+                <input type="text" id="applicant-mobile" name="applicant_mobile" pattern="[0-9]{10}" required>
+        
+                <label for="applicant-ration-card">Ration Card Number:</label>
+                <input type="text" id="applicant-ration-card" name="applicant_ration_card" pattern="[A-Za-z0-9]{10}" required>
+        
+                <label for="applicant-address">Address:</label>
+                <textarea id="applicant-address" name="applicant_address" required></textarea>
+        
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="applications">
+            <h3>Stored Applications</h3>
+            <table border="1">
+                <tr>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Ration Card</th>
+                    <th>Address</th>
+                </tr>
+                <!-- This section will be populated by the server-side rendering -->
+                <!-- Example of how you might display the applications if using templating -->
+                <!-- 
+                <% allApplications.forEach(app => { %>
+                    <tr>
+                        <td><%= app.name %></td>
+                        <td><%= app.mobile %></td>
+                        <td><%= app.ration_card %></td>
+                        <td><%= app.address %></td>
+                    </tr>
+                <% }) %>
+                -->
+            </table>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,19 @@
+---
+- name: Deploy Ration App to Kubernetes
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Apply Kubernetes deployment
+      command: kubectl apply -f k8s/deployment.yaml
+
+    - name: Apply Kubernetes service
+      command: kubectl apply -f k8s/service.yaml
+
+    - name: Wait for deployment to be ready
+      command: kubectl wait --for=condition=available --timeout=300s deployment/ration-app
+
+    - name: Get pods status
+      command: kubectl get pods
+
+    - name: Get service status
+      command: kubectl get svc

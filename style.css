@@ -1,0 +1,461 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    
+}
+
+body {
+    background-color: #ffffff;
+}
+
+/* Main Title Styling */
+header {
+    background-color: rgb(104, 0, 165); /* Default background for main title */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.main-title-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.main-title {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgb(99, 1, 112);
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #ffffff; /* Separate background for navigation */
+    padding: 10px 0;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;  /* Flex display for inline layout */
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    flex-wrap: nowrap;  /* Prevent wrapping */
+}
+
+.navbar li {
+    margin: 0 5px;  /* Adjusted margin for tighter spacing */
+    position: relative; /* For dropdown positioning */
+}
+
+.navbar li a {
+    color: rgb(104, 0, 165);
+    text-decoration: none;
+    font-size: 14px;  /* Reduced font size for single line */
+    padding: 8px 10px; /* Reduced padding */
+    transition: background-color 0.3s ease;
+    display: block; /* Display as block for easier padding */
+}
+
+.navbar li a:hover {
+    background-color: rgb(214, 143, 255);
+    border-radius: 5px;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+    display: none; /* Hidden by default */
+    position: absolute; /* Position relative to the parent li */
+    background-color: rgb(255, 255, 255); /* Background for dropdown */
+    min-width: 160px; /* Minimum width for dropdown */
+    box-shadow: 0 2px 10px rgb(78, 0, 122); /* Shadow effect */
+    z-index: 1; /* Ensure dropdown is on top */
+}
+
+.navbar li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+.dropdown li {
+    margin: 0; /* Remove margin for dropdown items */
+}
+
+.dropdown a {
+    color: #ffffff; /* Text color for dropdown */
+    padding: 10px; /* Padding for dropdown items */
+    text-decoration: none;
+    display: block; /* Full-width clickable area */
+}
+
+.dropdown a:hover {
+    background-color: rgb(84, 1, 95); /* Background on hover for dropdown */
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+    text-align: center;
+    background-image: url('bag.jpg');
+}
+
+section {
+    margin: 50px 0;
+}
+
+#dashboard h3{
+    color:white;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Flex container to align login and signup forms */
+.form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Styling for forms */
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    width: 45%;
+    box-shadow: 0 0 10px rgb(94, 1, 148);
+    border-radius: 10px;
+}
+
+h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: rgb(104, 0, 165);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: rgb(206, 124, 253);
+}
+
+/* Smart Card Services Vertical Navigation */
+.smart-card-navbar {
+    background-color: #eaeaea; /* Background color for the vertical nav */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.smart-card-navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.smart-card-navbar li {
+    margin: 5px 0;
+}
+
+.smart-card-navbar a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.smart-card-navbar a:hover {
+    background-color: #d4d4d4;
+    border-radius: 5px;
+}
+
+/* Gallery Styling */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress Bar Styling */
+#status-progress {
+    display: none;
+    height: 5px;
+    background-color: #4caf50;
+    width: 0;
+    transition: width 2s;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #4caf50;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #666;
+    color: #fff;
+    font-weight: bold;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(even) td {
+    background-color: #f4f4f4;
+}
+
+tr:hover td {
+    background-color: #f1f1f1;
+}
+
+a.download-button {
+    background-color: rgb(104, 0, 165);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+a.download-button:hover {
+    background-color: rgb(194, 88, 255);
+}
+
+.pdf-viewer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.pdf-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(104, 0, 165);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close-btn:hover {
+    background-color: rgb(194, 88, 255);
+}
+
+#pdf-iframe {
+    border: none;
+}
+
+.pdf-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pdf-item {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.pdf-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.pdf-item a {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+.pdf-item a:hover {
+    color: #23527c;
+}
+
+/* Styling for Smart Card Services container */
+.smart-card-services {
+    padding: 20px;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/* Styling for the Smart Card Services title */
+.smart-card-services h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Styling for the Smart Card Services navigation bar */
+.smart-card-navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.smart-card-navbar ul li {
+    margin: 10px 0;
+}
+
+.smart-card-navbar ul li a {
+    text-decoration: none;
+    padding: 12px 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.smart-card-navbar ul li a:hover {
+    background-color: #555;
+}
+
+/* Make the links stack vertically on smaller screens */
+@media (max-width: 768px) {
+    .smart-card-navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .smart-card-navbar ul li a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+#ration-calculator {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    width: 300px;
+    border-radius: 8px;
+}
+
+#ration-calculator h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#ration-calculator label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#ration-calculator input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#ration-calculator button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(84, 1, 95);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#ration-calculator button:hover {
+    background-color: rgb(161, 4, 182);
+}
+
+#calculation-result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#calculation-result h4 {
+    color: #333;
+    font-weight: bold;
+}
+

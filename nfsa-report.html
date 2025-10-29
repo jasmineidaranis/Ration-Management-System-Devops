@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godown Stock Report</title>
+    <link rel="stylesheet" href="style.css">
+    <!--<script>
+        function toggleNfsaReport() {
+            const nfsaReportSection = document.getElementById("nfsa-report");
+            nfsaReportSection.style.display = nfsaReportSection.style.display === "block" ? "none" : "block";
+        }
+    </script>-->
+</head>
+<body>
+    <header>
+        <div class="main-title-wrapper">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1 class="main-title">E-Governmental Ration Management System</h1>
+        </div>
+    </header>
+    <nav id="main-navbar">
+        <ul class="navbar">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="smart-card-services.html">Smart Card Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li>
+                <a href="hostelwelfare.html">Hostels & Welfare Institutions List</a>
+                <ul id="dropdown-menu" class="dropdown">
+                    <li><a href="hwpdf.html">Hostel & Welfare Institutions</a></li>
+                    <li><a href="bulkpermitpdf.html">Bulk Permit</a></li>
+                </ul>
+            </li>
+            <li><a href="godown-stock-report.html">Godown Stock Report</a></li>
+            <li><a href="pds-report.html">PDS Report</a></li>
+            <li><a href="nfsa-report.html">NFSA Report</a></li>
+        </ul>
+    </nav>
+    <div id="nfsa-report">
+        <h1>Details Displayed by Tamil Nadu</h1>
+        <div class="stats">
+            <span>318 Districts</span>
+            <span>35752 Taluks</span>
+            <span>347792 Fair Price Shops</span>
+            <span>17427125 Family Cards</span>
+            <span>35232711 Beneficiaries</span>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>District Name</th>
+                    <th>District Code</th>
+                    <th>Total Number of Taluks</th>
+                    <th>Total Number of FPS</th>
+                    <th>AAY Cards</th>
+                    <th>AAY Beneficiaries</th>
+                    <th>PHH Cards</th>
+                    <th>PHH Beneficiaries</th>
+                    <th>Total Number of Cards</th>
+                    <th>Total Number of Beneficiaries</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Thiruvallur</td>
+                    <td>01</td>
+                    <td>9</td>
+                    <td>110</td>
+                    <td>49498</td>
+                    <td>158458</td>
+                    <td>234651</td>
+                    <td>764564</td>
+                    <td>284629</td>
+                    <td>900231</td>
+                </tr>
+                <tr>
+                    <td>South Chennai</td>
+                    <td>02</td>
+                    <td>5</td>
+                    <td>65</td>
+                    <td>4888</td>
+                    <td>6432</td>
+                    <td>188456</td>
+                    <td>469431</td>
+                    <td>193344</td>
+                    <td>476863</td>
+                </tr>
+                <tr>
+                    <td>North Chennai</td>
+                    <td>03</td>
+                    <td>5</td>
+                    <td>68</td>
+                    <td>18377</td>
+                    <td>40606</td>
+                    <td>225310</td>
+                    <td>648743</td>
+                    <td>243687</td>
+                    <td>689349</td>
+                </tr>
+                <tr>
+                    <td>Kanchipuram</td>
+                    <td>04</td>
+                    <td>9</td>
+                    <td>148</td>
+                    <td>41713</td>
+                    <td>104570</td>
+                    <td>292653</td>
+                    <td>765219</td>
+                    <td>334366</td>
+                    <td>869789</td>
+                </tr>
+                <tr>
+                    <td>Vellore</td>
+                    <td>05</td>
+                    <td>13</td>
+                    <td>210</td>
+                    <td>62968</td>
+                    <td>161931</td>
+                    <td>354336</td>
+                    <td>933504</td>
+                    <td>417304</td>
+                    <td>1095435</td>
+                </tr>
+                <tr>
+                    <td>Villupuram</td>
+                    <td>06</td>
+                    <td>11</td>
+                    <td>261</td>
+                    <td>91345</td>
+                    <td>244985</td>
+                    <td>406248</td>
+                    <td>1111053</td>
+                    <td>497593</td>
+                    <td>1356038</td>
+                </tr>
+                <tr>
+                    <td>Vizhupuram</td>
+                    <td>07</td>
+                    <td>5</td>
+                    <td>110</td>
+                    <td>41213</td>
+                    <td>125441</td>
+                    <td>188247</td>
+                    <td>614759</td>
+                    <td>229460</td>
+                    <td>740200</td>
+                </tr>
+                <tr>
+                    <td>Coimbatore</td>
+                    <td>08</td>
+                    <td>10</td>
+                    <td>197</td>
+                    <td>68353</td>
+                    <td>206514</td>
+                    <td>378548</td>
+                    <td>792013</td>
+                    <td>446901</td>
+                    <td>998527</td>
+                </tr>
+                <tr>
+                    <td>Nilgiris</td>
+                    <td>09</td>
+                    <td>6</td>
+                    <td>102</td>
+                    <td>9964</td>
+                    <td>21425</td>
+                    <td>90607</td>
+                    <td>245524</td>
+                    <td>100571</td>
+                    <td>266949</td>
+                </tr>
+                <tr>
+                    <td>Dindigul</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>200</td>
+                    <td>49416</td>
+                    <td>141467</td>
+                    <td>276397</td>
+                    <td>754340</td>
+                    <td>325813</td>
+                    <td>895807</td>
+                </tr>
+                <tr>
+                    <td>Karur</td>
+                    <td>11</td>
+                    <td>7</td>
+                    <td>108</td>
+                    <td>22438</td>
+                    <td>56595</td>
+                    <td>108567</td>
+                    <td>307964</td>
+                    <td>130005</td>
+                    <td>364559</td>
+                </tr>
+                <tr>
+                    <td>Thiruchirapalli</td>
+                    <td>12</td>
+                    <td>10</td>
+                    <td>219</td>
+                    <td>28635</td>
+                    <td>81667</td>
+                    <td>264262</td>
+                    <td>703986</td>
+                    <td>292897</td>
+                    <td>785653</td>
+                </tr>
+                <tr>
+                    <td>Pudukkottai</td>
+                    <td>13</td>
+                    <td>9</td>
+                    <td>136</td>
+                    <td>32994</td>
+                    <td>97502</td>
+                    <td>198158</td>
+                    <td>554154</td>
+                    <td>231152</td>
+                    <td>651656</td>
+                </tr>
+                <tr>
+                    <td>Thanjavur</td>
+                    <td>14</td>
+                    <td>8</td>
+                    <td>204</td>
+                    <td>44019</td>
+                    <td>129161</td>
+                    <td>252691</td>
+                    <td>684606</td>
+                    <td>296710</td>
+                    <td>813767</td>
+                </tr>
+                <tr>
+                    <td>Nagapattinam</td>
+                    <td>15</td>
+                    <td>7</td>
+                    <td>134</td>
+                    <td>37209</td>
+                    <td>116048</td>
+                    <td>214213</td>
+                    <td>620757</td>
+                    <td>251422</td>
+                    <td>736805</td>
+                </tr>
+                <tr>
+                    <td>Thiruvarur</td>
+                    <td>16</td>
+                    <td>5</td>
+                    <td>78</td>
+                    <td>17016</td>
+                    <td>55720</td>
+                    <td>167378</td>
+                    <td>514551</td>
+                    <td>184394</td>
+                    <td>570271</td>
+                </tr>
+                <tr>
+                    <td>Pudukkottai</td>
+                    <td>17</td>
+                    <td>4</td>
+                    <td>64</td>
+                    <td>47202</td>
+                    <td>138848</td>
+                    <td>342177</td>
+                    <td>930641</td>
+                    <td>389379</td>
+                    <td>1069489</td>
+                </tr>
+                <tr>
+                    <td>Sivagangai</td>
+                    <td>18</td>
+                    <td>8</td>
+                    <td>149</td>
+                    <td>20618</td>
+                    <td>63925</td>
+                    <td>155036</td>
+                    <td>455071</td>
+                    <td>175654</td>
+                    <td>519996</td>
+                </tr>
+                <tr>
+                    <td>Ramanathapuram</td>
+                    <td>19</td>
+                    <td>7</td>
+                    <td>139</td>
+                    <td>27756</td>
+                    <td>83161</td>
+                    <td>169583</td>
+                    <td>523351</td>
+                    <td>197339</td>
+                    <td>606512</td>
+                </tr>
+                <tr>
+                    <td>Theni</td>
+                    <td>20</td>
+                    <td>5</td>
+                    <td>84</td>
+                    <td>27342</td>
+                    <td>68371</td>
+                    <td>107452</td>
+                    <td>287358</td>
+                    <td>134794</td>
+                    <td>355729</td>
+                </tr>
+                <tr>
+                    <td>Madurai</td>
+                    <td>21</td>
+                    <td>6</td>
+                    <td>193</td>
+                    <td>26218</td>
+                    <td>80752</td>
+                    <td>306162</td>
+                    <td>815672</td>
+                    <td>332380</td>
+                    <td>896424</td>
+                </tr>
+                <tr>
+                    <td>Thiruvallur</td>
+                    <td>22</td>
+                    <td>9</td>
+                    <td>204</td>
+                    <td>48617</td>
+                    <td>129428</td>
+                    <td>288745</td>
+                    <td>750681</td>
+                    <td>337362</td>
+                    <td>901489</td>
+                </tr>
+                <tr>
+                    <td>Kanyakumari</td>
+                    <td>23</td>
+                    <td>8</td>
+                    <td>192</td>
+                    <td>30354</td>
+                    <td>91098</td>
+                    <td>211389</td>
+                    <td>618129</td>
+                    <td>241743</td>
+                    <td>709227</td>
+                </tr>
+                <tr>
+                    <td>Tirunelveli</td>
+                    <td>24</td>
+                    <td>5</td>
+                    <td>73</td>
+                    <td>48317</td>
+                    <td>142391</td>
+                    <td>189124</td>
+                    <td>532896</td>
+                    <td>237441</td>
+                    <td>675287</td>
+                </tr>
+                <tr>
+                    <td>Thuthukudi</td>
+                    <td>25</td>
+                    <td>7</td>
+                    <td>97</td>
+                    <td>33250</td>
+                    <td>104553</td>
+                    <td>195898</td>
+                    <td>553709</td>
+                    <td>229148</td>
+                    <td>658262</td>
+                </tr>
+                <tr>
+                    <td>Thiruvannamalai</td>
+                    <td>26</td>
+                    <td>7</td>
+                    <td>94</td>
+                    <td>19143</td>
+                    <td>47960</td>
+                    <td>221847</td>
+                    <td>637328</td>
+                    <td>247326</td>
+                    <td>685288</td>
+                </tr>
+                <tr>
+                    <td>Krishnagiri</td>
+                    <td>27</td>
+                    <td>8</td>
+                    <td>197</td>
+                    <td>34527</td>
+                    <td>124634</td>
+                    <td>232987</td>
+                    <td>707019</td>
+                    <td>267514</td>
+                    <td>831653</td>
+                </tr>
+                <tr>
+                    <td>Dharmapuri</td>
+                    <td>28</td>
+                    <td>7</td>
+                    <td>126</td>
+                    <td>42949</td>
+                    <td>145780</td>
+                    <td>231361</td>
+                    <td>654083</td>
+                    <td>274310</td>
+                    <td>800263</td>
+                </tr>
+                <tr>
+                    <td>Salem</td>
+                    <td>29</td>
+                    <td>12</td>
+                    <td>167</td>
+                    <td>62158</td>
+                    <td>195931</td>
+                    <td>403579</td>
+                    <td>1126347</td>
+                    <td>465143</td>
+                    <td>1322278</td>
+                </tr>
+                <tr>
+                    <td>Erode</td>
+                    <td>30</td>
+                    <td>8</td>
+                    <td>123</td>
+                    <td>46013</td>
+                    <td>136275</td>
+                    <td>257541</td>
+                    <td>758732</td>
+                    <td>303554</td>
+                    <td>895007</td>
+                </tr>
+                <tr>
+                    <td>Tiruppur</td>
+                    <td>31</td>
+                    <td>8</td>
+                    <td>153</td>
+                    <td>44663</td>
+                    <td>114624</td>
+                    <td>269111</td>
+                    <td>696021</td>
+                    <td>313774</td>
+                    <td>810645</td>
+                </tr>
+                <tr>
+                    <td>Tiruvannamalai</td>
+                    <td>32</td>
+                    <td>10</td>
+                    <td>173</td>
+                    <td>23467</td>
+                    <td>76587</td>
+                    <td>326874</td>
+                    <td>785627</td>
+                    <td>350341</td>
+                    <td>862214</td>
+                </tr>
+                <tr>
+                    <td>Trichy</td>
+                    <td>33</td>
+                    <td>8</td>
+                    <td>143</td>
+                    <td>40913</td>
+                    <td>109234</td>
+                    <td>298467</td>
+                    <td>790432</td>
+                    <td>339380</td>
+                    <td>899666</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

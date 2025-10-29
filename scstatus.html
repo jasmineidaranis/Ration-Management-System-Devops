@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ration Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+        angular.module('rationApp', [])
+        .controller('rationController', function($scope) {
+            // Initialize the variables
+            $scope.item1 = 0; // Sugar
+            $scope.item2 = 0; // Rice
+            $scope.item3 = 0; // Oil
+            $scope.pricePerUnit = 0; // Price per unit
+            $scope.totalCost = 0; // Total cost
+
+            $scope.calculateTotal = function() {
+                // Calculate the total cost for each item
+                const sugarCost = ($scope.item1 || 0) * ($scope.pricePerUnit || 0);
+                const riceCost = ($scope.item2 || 0) * ($scope.pricePerUnit || 0);
+                const oilCost = ($scope.item3 || 0) * ($scope.pricePerUnit || 0);
+                
+                // Update the total cost
+                $scope.totalCost = sugarCost + riceCost + oilCost;
+            };
+        });
+    </script>
+</head>
+<body ng-app="rationApp" ng-controller="rationController">
+    <header>
+        <div class="main-title-wrapper">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1 class="main-title">E-Governmental Ration Management System</h1>
+        </div>
+    </header>
+
+    <nav id="main-navbar">
+        <ul class="navbar">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="smart-card-services.html">Smart Card Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li>
+                <a href="hostelwelfare.html">Hostels & Welfare Institutions List</a>
+                <ul id="dropdown-menu" class="dropdown">
+                    <li><a href="hwpdf.html">Hostel & Welfare Institutions</a></li>
+                    <li><a href="bulkpermitpdf.html">Bulk Permit</a></li>
+                </ul>
+            </li>
+            <li><a href="godown-stock-report.html">Godown Stock Report</a></li>
+            <li><a href="pds-report.html">PDS Report</a></li>
+            <li><a href="nfsa-report.html">NFSA Report</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <div id="ration-calculator" class="form2">
+            <h3>Ration Management Calculator</h3>
+            <form name="rationCalculatorForm">
+                <label for="item1">Sugar (kg):</label>
+                <input type="number" id="item1" ng-model="item1" required>
+
+                <label for="item2">Rice (kg):</label>
+                <input type="number" id="item2" ng-model="item2" required>
+
+                <label for="item3">Oil (L):</label>
+                <input type="number" id="item3" ng-model="item3" required>
+
+                <label for="price-per-unit">Price Per Unit:</label>
+                <input type="number" id="price-per-unit" ng-model="pricePerUnit" required>
+
+                <button type="button" ng-click="calculateTotal()">Calculate Total</button>
+            </form>
+
+            <div id="calculation-result">
+                <h4>Total Cost: ₹<span>{{ totalCost }}</span></h4>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
